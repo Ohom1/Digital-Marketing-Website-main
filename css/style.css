@@ -1,0 +1,706 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Common clasess*/
+.clear {
+    clear: both;
+}
+
+.common-h5 {
+    color: #3b3663;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.common-h2 {
+    color: #3b3663;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a {
+    font-family: 'Rubik';
+    font-weight: 400;
+}
+
+.active {
+    color: #f47514 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Nunito';
+    font-weight: 800;
+}
+
+p {
+    font-family: 'Rubik';
+    font-weight: 400;
+}
+/*header*/
+.header {
+    z-index: 1;
+    position: relative;
+}
+.nav-cal{
+    float: left;
+    width: 75%;
+}
+.cnt-info-col{
+    float: right;
+    text-align: right;
+    width: 20%;
+    margin-top: -8%;
+}
+.logo-n{
+    float: left;
+    width: 30%;
+}
+.menu{
+    float: right;
+    width: 70%;
+}
+.logo-n img {
+    width: 130px;
+}
+.menu a {
+    text-decoration: none;
+    padding: 43px;
+    display: inline-block;
+    color: #4d4d4d;
+    transition: all 0.5s ease;
+}
+.menu a:hover{
+    color: #f47514;
+}
+.cnt-info-mail span {
+    color: darkolivegreen;
+    padding: 72px;
+}
+.cnt-info-col span {
+    color: darkolivegreen;
+}
+.cnt-info-col a{
+    color: :#4d4d4d;
+    text-decoration: none;
+    margin-top: 23px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+}
+
+.cnt-info-col a:hover{
+    color: #f47514;
+}
+.section.header-bg-parent {
+    position: relative;
+    top: -324px;
+}
+.header-col1 {
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 13%;
+}
+.header-col2 {
+    background-image: url(../images/wo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+}
+
+h5{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.header-col1 h2.typewrite{
+    color: yellow;
+    font-size: 50px;
+}
+.header-col1 h2{
+    color: mediumslateblue;
+    font-size: 35px;
+    margin: 21px 0px 51px;
+
+}
+p{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+.cnt-info-mail{
+    float: right;
+    text-align: right;
+    width: 25%;
+    margin-top: -5%;
+}
+.cnt-info-mail a:hover{
+    color: #f47514;
+}
+button.common-btn{
+    background:yellow;
+    padding: 20px 43px;
+    color: white;
+    boarder:none;
+    border-radius: 20px;
+    font-family: "Nunito";
+    font-weight: 800;
+    cursor: pointer;
+    margin: 20px 0px;
+    transition: all 0.5s ease;
+}
+button.common-btn:hover{
+    background: brown;
+}
+h5.common-h5 {
+    color: yellow;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 100px 24px  0px 0px;
+}
+h2.common-h2 {
+    line-height: 0px;
+}
+/*work-process*/
+.work-process {
+    background-color: #fcfcfc;
+    padding: 22px 0px;
+}  
+.work-col1 {
+    float: left;
+    width: 40%;
+    margin-left: 7%;
+    margin-right: 2%;
+    background-color: #fff;
+    padding: 4px;
+    box-shadow: 2px 2px 10px #fcfcfc;
+}
+.work-col1:hover{
+    background-color:#3b366b;
+}
+.work-col1:hover h3{
+    background-color:#fff;
+}
+.work-col1:hover h4{
+    background-color:#fff;
+}
+
+
+
+.work-col2{
+    float:right;
+    width: 40%;
+    margin-left: 7%;
+    margin-right: 2%;
+    background-color: #fff;
+    padding: 4px;
+    box-shadow: 2px 2px 10px #fcfcfc;
+}
+.work-col2:hover{
+    background-color:#3b366b;
+}
+.work-col2:hover h3{
+    background-color:#fff;
+}
+.work-col2:hover h4{
+    background-color:#fff;
+}
+
+.work-col4{
+    float:right;
+    width: 40%;
+    margin-left: 7%;
+    margin-right: 4%;
+    background-color: #fff;
+    padding: 4px;
+    box-shadow: 2px 2px 10px #fcfcfc;
+}
+.work-col4:hover{
+    background-color:#3b366b;
+}
+.work-col4:hover h3{
+    background-color:#fff;
+}
+.work-col4:hover h4{
+    background-color:#fff;
+}
+
+.work-col3{
+    float:right;
+    width: 40%;
+    margin-left: 7%;
+    margin-right: 2%;
+    background-color: #fff;
+    padding: 4px;
+    box-shadow: 2px 2px 10px #fcfcfc;
+}
+.work-col3:hover{
+    background-color:#3b366b;
+}
+.work-col3:hover h3{
+    background-color:#fff;
+}
+.work-col3:hover h4{
+    background-color:#fff;
+}
+
+.container {
+    font-family: "Rubik";
+    font-size: 18px;
+    font-weight: 100;
+}
+h3 {
+    color: darkblue;
+    padding: 34px;
+    font-size: larger;
+    padding: 0px;
+}
+h4{
+    color: #4d4d4d;
+}
+/*why choose us*/
+.Why-choose-col {
+    float: left;
+    width: 50%;
+    padding-top: 150px;
+}
+.count-col {
+    float: right;
+    width: 50%;
+}
+.stat {
+    float: left;
+    width: 30%;
+}
+.stat-info-par {
+    float: right;
+    width: 70%;
+}
+.Why-choose-col p {
+    color: #696687;
+    line-height: 26px;
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 16px;
+    padding: 13px 100px 0px 0px;
+}
+.Why-choose-col h5{
+    font-size: inherit;
+    font-weight: bolder;
+    padding: 4px;
+    color: darkblue;
+}
+.Why-choose-col button.common-btn {
+    background: linear-gradient(45deg, black, transparent);
+    padding: 20px 43px;
+    border-radius: 17px;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin: 20px 0px;
+    transition: all 0.5s ease
+}
+.Why-choose-col button.common-btn:hover{
+    background: yellow;
+}
+.milestone-counter{
+    margin: 20px;
+}
+.highlight{
+    color: #3b3663;
+    padding-top: 20px;
+    font-family: "Numito";
+    font-weight: 800;
+    font-size: 69px;
+    overflow: hidden;
+    display: black;
+    position: relative;
+}
+.highlight:after{
+    content: "+";
+    color: #f47a14;
+    position: absolute;
+    top: 9px;
+    left: 73px;
+    font-size: 41px;
+}
+.stat-info-div p{
+    color:#383663;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "RubiK";
+    padding: 20px 0px;
+}
+.stat-info-sub-par{
+    margin: 58px 0px 40px;
+}
+.stat-info-div{
+    position: relative;
+}
+.stat-info-div:before{
+    content: "s";
+    border-left: 1px solid #ddd;
+    position: absolute;
+    height: 85px;
+    font-size: 0;
+    left: -19px;
+}
+section#Why\ Choose\ Us {
+    margin-top: 60px;
+}
+.RPSI-img-col {
+    float: left;
+    width: 50%;
+}
+.text-center h2 {
+       margin: 44px;
+}
+img.img-responsive {
+    border-radius: 38px;
+}
+.RPSI-img-info-col {
+    float: right;
+    width: 50%;
+    padding: 20px;
+}
+.RPSI-img-info a{
+    position: absolute;
+    left: 250px;
+    color: #ffff;
+    top: 2400px;
+}
+.RPSI-img-info a:hover{
+    background-color: yellowgreen;
+}
+.RPSI-img {
+    margin-left: 100px;
+}
+span.color {
+    color: #0071dc;
+}
+h2 {
+    color: black;
+    font-size: 36px;
+    margin: 10px 0px 10px;
+}
+.pbc p {
+    color: #444;
+    font-family: "Rubik";
+    line-height: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 16px;
+}
+ul.about-list.text-start{
+    float: left;
+    width: 50%;
+    font-size: 20px;
+    padding: 15px;
+}
+ul.about-list.text-start:hover{
+    color: gold;
+}
+ul.about-list.text-start2{
+    float: left;
+    width: 50%;
+    font-size: 20px;
+    padding: 15px;
+}
+ul.about-list.text-start2:hover{
+    color: gold;
+}
+ul.about-list.text-start3{
+    float: left;
+    width: 50%;
+    font-size: 20px;
+    padding: 15px;
+}
+ul.about-list.text-start3:hover{
+    color: gold;
+}
+ul.about-list.text-start4{
+    float: left;
+    width: 50%;
+    font-size: 20px;
+    padding: 15px;
+}
+ul.about-list.text-start4:hover{
+    color: gold;
+}
+.RPSI-img-info-col p {
+    color: #444;
+    font-family: "Rubik";
+    line-height: 26px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/*our services*/
+.Service-col {
+    float: left;
+    width: 30%;
+    margin-left: 3%;
+    margin-top: 45px;
+/*    overflow: hidden;*/
+}
+.Service-col span{
+    color: #696687;
+    font-size: 14px;
+    font-family:"Nunito" ;
+    font-weight: 400;
+    padding: 20px 0px 6px 20px ;
+    display: inline-block;
+}
+.Service-col h3{
+    font-size: 20px;
+    color: #696687;
+    font-family: "Nunito";
+    font-weight: 800;
+    padding: 0px 17px;
+}
+.Service-col a{
+    color: #ff881f;
+    font-size: 13px;
+    font-family: "Rubik";
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 17px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.Service-col a:after{
+    content: "\2192";
+    font-family: -14px;
+    padding-left:12px ;
+    transition: all 0.5s ease;
+    visibility: hidden;
+}
+.Service-col a:hover:after{
+    visibility: visible;
+    margin-left: 14px;
+}
+Service-col img{
+    border-radius: 5px;
+    transition: all 0.5 ease-in;
+}
+.Service-col img:hover{
+    transform:scale( 1.1,1.1);
+}
+
+
+/*client client*/
+ .review .review-slider{
+    border: 0px solid;
+    padding: 1rem;
+ }
+ .review .review-slider .box{
+    border: 0px solid red;
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 23rem;
+    outline-offset: -1rem;
+    transition: .2s linear;
+    outline:var(--outline) ;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;        
+ }
+ .review .review-slider .box:hover{
+    box-shadow: 1px 1px 10px 4px var(green);
+ }
+.review .review-slider .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 24%;
+}
+.review .review-slider .box p{
+    color: #696687;
+    line-height: 26px;
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 16px;
+}
+.review .review-slider .box h5{
+    color: var(--black);
+}
+
+/*pics slide*/
+.owl-img-par {
+    position: relative;
+    overflow: hidden;
+}
+.owl-img-par img{
+/*    filter: brightness(0.9);*/
+    transition: all 0.5s ease;
+}
+.owl-img-par img:hover{
+    transform: scale(1.1,1.1);
+}
+/*contact*/
+
+#contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/choose-img.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0px;
+}
+
+.form-par {
+    background-image: linear-gradient(20deg, #ff841f 0%, #ff9721 57%);
+    padding: 30px 40px;
+    width: 50%;
+    margin: 0 auto;
+}
+    
+.form-com {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0px;
+    padding: 10px 10px;
+}
+
+.form-par h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    font-family: "Nunito";
+    margin-bottom: 25px;
+}
+
+input.submit-btn {
+    color: #fff;
+    border: none;
+    background-image: linear-gradient(180deg, #059DDE 0%, #1A2E84 100%);
+    padding: 14px 40px;
+    margin: 20px auto 0px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+input.submit-btn:hover {
+    background-image: linear-gradient(180deg, #1A2E84 0%, #059DDE 100%);
+}
+
+
+.footer-col {
+    float: left;
+    width: 30%;
+    margin-right: 3%;
+    margin-top: 45px;
+}
+
+.footer-2-col {
+    position: relative;
+    left: 110px;
+}
+
+.footer-col h3 {
+    color: #3b3663;
+    font-family: "Nunito";
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    color: #696687;
+    font-size: 16px;
+    font-family: "Rubik";
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.footer-col i {
+    color: #fff;
+    background-color: #ff881f;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.social-icons-footer i:hover {
+    transform: translateY(-10px)
+}
+
+.footer-col.footer-2-col ul li {
+    color: #696687;
+    font-family: "Rubik";
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.footer-col.footer-2-col ul li:hover {
+    padding-left: 5px;
+}
+
+.footer-col.footer-2-col ul {
+    list-style: none;
+}
+
+.footer-col a {
+    color: #696687;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.footer-col span {
+    padding-left: 10px;
+}
+
+p.copyright-footer {
+    text-align: center;
+    font-family: "Rubik";
+    padding: 20px 0px;
+}
+
+hr.footer-hr {
+    margin: 60px 0px 20px;
+}
+p.copyright-footer {
+    text-align: center;
+    font-family: "Rubik";
+    padding: 0px 0px;
+    color: #696687;
+    font-size: 12px ;
+}
