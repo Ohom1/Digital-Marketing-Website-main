@@ -24,29 +24,88 @@
     <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css" />
 </head>
 <body>
+	<style>
+		/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common classes */
+.clear {
+    clear: both;
+}
+
+.container {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Navigation bar styling */
+.top-bar {
+    background-color: #ffffff; /* Background color of the top bar */
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px 0; /* Vertical padding for the top bar */
+}
+
+.menu {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-around; /* Space out menu items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 15px 20px; /* Padding around each link */
+    font-size: 16px; /* Font size for better readability */
+    font-family: 'Rubik', sans-serif;
+    color: #4d4d4d; /* Text color */
+    transition: all 0.5s ease;
+}
+
+.menu a:hover {
+    color: #f47514; /* Hover color */
+}
+
+.active {
+    color: #f47514 !important; /* Highlight active menu item */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+        justify-content: center; /* Center align menu items */
+    }
+
+    .menu a {
+        padding: 10px; /* Reduce padding on smaller screens */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+	</style>
 	<header>
 		<div class="container">
 			<div class="top-bar">
 				<div class="nav-col">
-					<div class="logo-n">
-						<img src="images/logo-n.png" class="img-responsive" alt="logo-n" />
-				</div><!-- logo-n -->
 				<div class="menu">
-					<a class="active" href="#home"> Home</a>
-					<a href="#Right Partner for Software Innovation"> Services</a>
-					<a href="#Why-Choose-Us">About</a>
-					<a href="#Contact">Contact</a>
+					<a class="active" href="index.html"> Home</a>
+					<a href="service.html"> Services</a>
+					<a href="About us.html">About Us</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="refund.html">Refund</a>
+                    <a href="privacy.html">Privacy</a>
+					<a href="contact us.html">Contact</a>
 					
 				</div>
 				<div class="clear"></div><!-- clear -->
 			</div>
 			<!--nav-col-->
-			<div class="cnt-info-col">
-				<a href="tel:+44 7944 619978"><span>Call us:-</span>+44 7944 619978</a>
-			</div>
-			<div class="cnt-info-mail">
-				<a href="e-mail: info@digitalbotsolutions.com"><span>Email us:-</span>info@digitalbotsolutions.com</a>
-			</div>
+			
 			<div class="clear"></div><!-- clear -->	
 			</div>
 			<!--top-bar-->
@@ -56,9 +115,9 @@
 		<div class="header-col1">
 			<h5>WELCOME</h5>
 			<h2>Digital Bot Solutions</h2>
-			<h2 class="typewrite" data-period="1000" data-type='["We Provide Best IT Service","For your Need."]'></h2>
+			<h2 class="typewrite" data-period="1000" data-type='["We Provide Best ", "IT Services","For your Need."]'></h2>
 			<p>We are leading technology solutions providing company all over the world.</p>
-			<button class="common-btn" type="button">Get A Quote</button>
+			
 		</div><!-- header-col1 -->
 		<div class="header-col2"></div><!-- header-col2 -->
 		<div class="clear"></div><!-- clear -->	
@@ -69,35 +128,136 @@
 			<h2 class="common-h2">How Our Services Will Help You to Grow</h2>
 		</div><!-- text-center -->
 
-		<div class="work-process">
-			<div class="container">
-				<div class="work-col1">
-					<h3>Initial meeting</h3>
-					<img src="images/s.png" class="img-responsive" alt="Service"/>
-					<h4>During this meeting we will answer any questions you have about us, and listen to what your requirements and goals are for the project. We will then write a short proposal for your project with an estimated cost for a full detail proposal with specifications.
-					</h4>
+		<section class="work-process">
+			<div class="container1">
+				<div class="work-col">
+					<div class="work-content">
+						<h3>Access to Learning Resources</h3>
+						<img src="https://img.pikbest.com/wp/202348/immersive-online-learning-3d-visualization-of-technology-with-books-on-mobile-devices_9774801.jpg!bw700" class="img-responsive" alt="Service"/>
+						<h4>
+							After enrolling, you’ll receive exclusive access to a wide range of learning materials, including downloadable content, interactive quizzes, and project files. These resources are designed to help you dive deeper into the topics covered and practice on your own.</div>
 				</div>
-				<div class="work-col2">
-					<h3>Architecture and System Building</h3>
-					<img src="images/t.png" class="img-responsive" alt="Service"/>
-					<h4>The architecture of the project is then laid out by Innovare’s Solutions team. Before we move on to building, we undertake a review based on the specification agreed in Stage 2.
-					</h4>
+				<div class="work-col">
+					<div class="work-content">
+						<h3>Ongoing Mentorship & Support</h3>
+						<img src="https://epaouydin3q.exactdn.com/wp-content/uploads/2024/02/challenges-of-AI-in-modern-mentorship-1024x585.jpg?strip=all&lossy=1&ssl=1" class="img-responsive" alt="Service"/>
+						<h4>
+							Our support doesn’t end when the course is over. We offer personalized mentorship sessions, where you can ask questions and get expert guidance on challenges you encounter. 
+							Our instructors are dedicated to helping you succeed even after the course concludes.	</h4>
+					</div>
 				</div>
-				<div class="work-col3">
-					<h3>Internal Testing</h3>
-					<img src="images/v.png" class="img-responsive" alt="Service"/>
-					<h4>In this stage an application will be deployed onto the client’s environment for end user acceptance testing. We will use bug tracking tools to track all the issues and deploy updated version as per the fixes. Once acceptance is completed we will deploy the application to production environment.	
-					</h4>
+				<div class="work-col">
+					<div class="work-content">
+						<h3>Community Access & Networking</h3>
+						<img src="https://img.freepik.com/premium-photo/social-network-concept-with-3d-people-dark-blue-background-3d-rendering-network-community-teamwork-social-network-concept-illeastration-ai-generated_538213-8861.jpg" class="img-responsive" alt="Service"/>
+						<h4>
+							You’ll be invited to join our private community of like-minded learners and professionals. This community is a space to share ideas, network, seek advice, and get feedback.
+							 It’s a valuable resource for growing your connections and staying motivated.	</h4>
+					</div>
 				</div>
-				<div class="work-col4">
-					<h3>Acceptance Testing and Go Live</h3>
-					<img src="images/u.png" class="img-responsive" alt="Service"/>
-					<h4>This is the testing phase in which the application will go two rounds of testing by our in-house team before being sent through to you for your approval. The stage consists of a small number of users running through all the features of the application and providing us with feedback, which we use to make the last minor modifications.
-					</h4>
-				</div>	
+				<div class="work-col">
+					<div class="work-content">
+						<h3>Exclusive Webinars & Advanced Workshops</h3>
+						<img src="https://hpil.org/ImageRepository/Document?documentID=8248" class="img-responsive" alt="Service"/>
+						<h4>
+							We provide regular, exclusive webinars and advanced workshops for our alumni. These sessions focus on emerging trends, advanced topics, and practical skills to ensure you remain competitive and continue growing in your field.</h4>
+					</div>
+				</div>
 			</div>
-			<div class="clear"></div>
-		</div>
+		</section>
+		<style>
+			/* General Styles for the Work Process */
+.work-process {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.container1{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.work-col {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 45%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.work-col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.work-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.work-content h4 {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.work-content img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.work-col:hover h3 {
+    color: #fa3807;
+}
+
+.work-col:hover img {
+    transform: scale(1.05);
+}
+
+.work-col:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(232, 161, 107, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.work-col:hover:after {
+    opacity: 1;
+}
+
+/* Additional Aesthetic Touches */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .work-col {
+        flex: 1 1 100%;
+    }
+}
+
+		</style>
 	</section><!-- end section -->
 	<section id="Why-Choose-Us">
 		<div class="container">
@@ -178,38 +338,38 @@
 			</div><!-- RPSI-img-col -->
 			<div class="RPSI-img-info-col">
 				<div class="pbc">
-					<span class="color"> 5+ Years of Experience </span>
-							<h2> Right Partner for Software Innovation</h2>
+					<span class="color"> 5+ Years of Excellence </span>
+							<h2> Your Trusted Partner in Skill Development</h2>
 
-                           <p>Over 5+ years working in IT services developing software applications and mobile apps for clients all over the world.</p>
+                           <p>With over 5 years of experience in delivering top-quality education in web development, software engineering, and IT services, we've empowered learners worldwide.</p>
                            <div class="row">
                            	<div class="col-lg-6 col-md-6">
                            	<ul class="about-list text-start">
                            		<li>
-                           			<i class="bx bxs-check-circle"></i>Good Quality Products Services
+                           			<i class="bx bxs-check-circle"></i>High-Quality Resources
                            		</li>
                            	</ul>
                            		<ul class="about-list text-start2">
                            		<li>
-                           			<i class="bx bxs-check-circle"></i>24/7 Customer Service
+                           			<i class="bx bxs-check-circle"></i>24/7 Student Support
                            		</li>
                            	</ul>
                             	<ul class="about-list text-start3">
 
                            		<li>
-                           			<i class="bx bxs-check-circle"></i>Expert Team Members
+                           			<i class="bx bxs-check-circle"></i>Expert Instructors
                            		</li>
                            	</ul>
                            	<ul class="about-list text-start4">
 
                            		<li>
-                           			<i class="bx bxs-check-circle"></i>Easy to Customer Services
+                           			<i class="bx bxs-check-circle"></i>Easy Access to Course Material
                            		</li>
                             </ul>
                             </div>	
                            </div><!-- row -->
 				</div><!-- pbc -->
-				<p>We have highly skilled engineers with excellent technical knowledge and experience in using the latest software standards. We have built a large pool of knowledge that we apply to deliver solutions that meet client's needs, expectations. By putting our clients at the heart of everything we do, we are proud that we are still supporting our very first business client.</p>
+				<p>We are proud to have a team of skilled educators and developers with hands-on experience in the latest technologies. By focusing on our students’ needs, we are delighted to see our first learners achieving their goals and continuing to grow with us.</p>
 				<div class="clear"></div>
 			</div><!-- RPSI-img-info-col -->
 		</section><!-- section end -->
@@ -223,37 +383,37 @@
 					<img src="images/web.png" alt="Service1" class="img-responsive" />
 					<span>web service</span>
 					<h3>Web Development</h3>
-					<a href="#">To know more</a>
+					<a href="About us.html">To know more</a>
 				</div><!-- Service-col -->
 				<div class="Service-col">
 					<img src="images/mobile.png" alt="Service1" class="img-responsive" />
 					<span>Apps service</span>
 					<h3>App Development</h3>
-					<a href="#">To know more</a>
+					<a href="About us.html">To know more</a>
 				</div><!-- Service-col -->
 				<div class="Service-col">
 					<img src="images/seo.png" alt="Service1" class="img-responsive" />
 					<span>Digital Marketing Service</span>
 					<h3>Search Engine Optimisation</h3>
-					<a href="#">To know more</a>
+					<a href="About us.html">To know more</a>
 				</div><!-- Service-col -->
 				<div class="Service-col">
 					<img src="images/social.png" alt="Service1" class="img-responsive" />
 					<span>Digital marketing service</span>
 					<h3>Social Media Marketing</h3>
-					<a href="#">To know more</a>
+					<a href="About us.html">To know more</a>
 				</div><!-- Service-col -->
 				<div class="Service-col">
 					<img src="images/pay.png" alt="Service1" class="img-responsive" />
 					<span>Digital marketing service</span>
 					<h3>Pay Per Click Advertising</h3>
-					<a href="#">To know more</a>
+					<a href="About us.html">To know more</a>
 				</div><!-- Service-col -->
 				<div class="Service-col">
 					<img src="images/lead.png" alt="Service1" class="img-responsive" />
 					<span>ROI</span>
 					<h3>Lead Generation Campaign</h3>
-					<a href="#">To know more</a>
+					<a href="About us.html">To know more</a>
 				</div><!-- Service-col -->
 				<div class="clear"></div>
 			</div><!-- container -->	
@@ -377,7 +537,6 @@
             <div class="container">
                 <div class="footer-col">
                     <h3>About Us</h3>
-                    <img src="images/footer-logo.png" class="img-responsive" />
                     <p>Digital Bot Soultions Ltd.<br>Registered in England and Wales.<br> Company Registration Number: 14470283</p>
                     <p><i class="fa fa-map-o"></i> <span>West World, West Gate, London, W5 1DT,United Kingdom(Head Office</span></p>
                 </div>
@@ -391,18 +550,13 @@
                         <li>Contact Us</li>
                     </ul>
                      <div class="social-icons-footer">
-                        <i class="fa fa-facebook-square"></i>
-                        <i class="fa fa-twitter-square"></i>
-                        <i class="fa fa-instagram"></i>
-                        <i class="fa fa-linkedin-square"></i>
+                       
                     </div>
                 </div>
                 <!--footer-col-->
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <p><i class="fa fa-envelope-o"></i> <a href="mailto:demo@gmail.com">info@digitalbotsolutions.com</a></p>
-                    <p><i class="fa fa-mobile-phone"></i> <a href="tel:+44 7944 619978">+44 7944 619978</a></p>
-                    <p><i class="fa fa-mobile-phone"></i> <a href="tel:+44 7824 485932">+44 7824 485932</a></p>
                     <p><i class="fa fa-map-o"></i> <span> Office Jasmine Appartments, Road Number 5, Kakatiya Hills, Madhapur, Hyderabad, India(Branch)</span></p>
                 </div>
                 <!--footer-col-->
