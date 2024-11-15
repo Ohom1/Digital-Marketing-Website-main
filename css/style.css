@@ -107,7 +107,7 @@ p {
     color: darkolivegreen;
 }
 .cnt-info-col a{
-    color: :#4d4d4d;
+    color: #4d4d4d;
     text-decoration: none;
     margin-top: 23px;
     display: inline-block;
@@ -510,7 +510,7 @@ ul.about-list.text-start4:hover{
     visibility: visible;
     margin-left: 14px;
 }
-Service-col img{
+.Service-col img{
     border-radius: 5px;
     transition: all 0.5 ease-in;
 }
