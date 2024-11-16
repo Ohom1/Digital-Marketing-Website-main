@@ -14,6 +14,7 @@
 
     <!--media css-->
     <link type="text/css" rel="stylesheet" href="css/media.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!--jquery ui files-->
     <link type="text/css" rel="stylesheet" href="css/jquery-ui.structure.min.css" />
@@ -149,14 +150,161 @@
 
 </style>    
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+
+        /* Wrapper for the entire Terms & Conditions content */
+        .terms-content-wrapper {
+            width: 85%;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #f47514;
+            margin-bottom: 20px;
+        }
+
+        /* Section Titles */
+        h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Paragraphs for regular text */
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Lists inside sections */
+        .terms-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .terms-section li {
+            margin-bottom: 10px;
+        }
+
+        /* Back Button */
+        .btn-back {
+            display: inline-block;
+            background-color: #f47514;
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #e36200;
+        }
+
+        /* Small responsive tweaks */
+        @media (max-width: 768px) {
+            .terms-content-wrapper {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="terms-content-wrapper">
+        <h1>Terms & Conditions</h1>
+
+        <div class="terms-section">
+            <h2>1. Introduction</h2>
+            <p>Welcome to Digital Bot Solutions Ltd. By accessing and using our website and services, you agree to the terms outlined in this document. Please take a moment to review these terms carefully.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>2. Use of Our Services</h2>
+            <p>Our services are provided solely for educational purposes. By using our services, you agree to comply with all applicable laws, including intellectual property laws and other legal requirements. Unauthorized use may result in suspension or termination of your account.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>3. User Responsibilities</h2>
+            <ul>
+                <li>You are responsible for maintaining the confidentiality of your account information.</li>
+                <li>During registration, you agree to provide accurate and up-to-date information.</li>
+                <li>Notify us immediately if there is any unauthorized access to your account.</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>4. Payment Terms</h2>
+            <p>Payment for courses is required upfront. All fees are non-refundable, except where explicitly stated in our refund policy. Failure to make payments may result in access restrictions.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>5. Privacy and Data Protection</h2>
+            <p>We value your privacy. Our collection and use of personal data is governed by our Privacy Policy, which you consent to by using our services. Please refer to our Privacy Policy for detailed information.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>6. Limitation of Liability</h2>
+            <p>We are not liable for any damages resulting from the use of our services, including but not limited to direct, indirect, incidental, or consequential damages. Our liability is limited to the maximum extent allowed by law.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>7. Changes to Terms</h2>
+            <p>We reserve the right to update or modify these Terms & Conditions at any time. Any changes will be posted on this page, and continued use of our services after the changes will constitute acceptance of the new terms.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions regarding these Terms & Conditions, please contact us at <a href="mailto:info@digitalbotsolutions.com" style="color: #f47514;">info@digitalbotsolutions.com</a>.</p>
+        </div>
+
+        <a href="index.html" class="btn-back">Back to Home</a>
+    </div>
+
+
+
 
 <footer>
     <div class="container">
         <div class="footer-col">
             <h3>About Us</h3>
-            <p>Digital Bot Soultions Ltd.<br>Registered in England and Wales.<br> Company Registration Number: 14470283</p>
-            <p><i class="fa fa-map-o"></i> <span>West World, West Gate, London, W5 1DT,United Kingdom(Head Office</span></p>
-        </div>
+                    <p>Digital Bot Soultions Ltd.<br> is a trusted provider of online education,<br>registered in England and Wales.</p>
+					<p>We specialize in delivering high-quality courses that empower individuals to advance their skills and achieve their professional goals. </p>
+                       </div>
         <!--footer-col-->
         <div class="footer-col footer-2-col">
             <h3>Quick Links</h3>
@@ -179,7 +327,8 @@
         <!--footer-col-->
         <div class="clear"></div>
         <hr class="footer-hr">
-        <p class="copyright-footer">&copy; Copyright 2022 Digital Bot Solutions Ltd. All Rights Reserved.</p>
+       <p class="copyright-footer">&copy; Copyright 2022 Digital Bot Solutions Ltd. All Rights Reserved.<a style="color: #3B5998;">XOZO MULTIMEDIA LLP</a></p>
+          
     </div>
 </footer>
 

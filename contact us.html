@@ -148,16 +148,248 @@
 
 /* Clear the float for layout consistency */
 
-</style>    
+</style>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+
+        /* Wrapper for the entire contact section */
+        .contact-wrapper {
+            width: 85%;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #f47514;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* Form Styling */
+       /* Contact Form Styling */
+.contact-form {
+    max-width: 600px; /* Maximum width for the form */
+    width: 80%; /* Width is set to 80% of the container or parent element */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust input and textarea width */
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;  /* Ensure the input fields and textarea take full width */
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+.contact-form button {
+    background-color: #f47514;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make button take full width of the form */
+}
+
+/* Button Hover Effect */
+.contact-form button:hover {
+    background-color: #e36200;
+}
+
+        /* Contact Info Styling */
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .contact-info .info-box {
+            width: 30%;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info .info-box h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .contact-info .info-box p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Google Map */
+        .map-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        /* Pop-up Message Styling */
+.popup-message {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup-message p {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.popup-message button {
+    background-color: #f47514;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup-message button:hover {
+    background-color: #e36200;
+}
+
+
+        /* Small responsive tweaks */
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                width: 90%;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info .info-box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .contact-form {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-wrapper">
+        <h1>Contact Us</h1>
+
+        <h2>We'd Love to Hear From You!</h2>
+        <p>If you have any questions, comments, or need support, feel free to reach out to us using the form below or contact us directly at the details provided.</p>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm" action="javascript:void(0);">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <div class="info-box">
+                <h3>Our Address</h3>
+                <p>123 Digital Bot Solutions Avenue, Tech City, ABC 12345</p>
+            </div>
+            <div>
+               
+            </div>
+            <div class="info-box">
+                <h3>Email Us</h3>
+                <p><a href="mailto:info@digitalbotsolutions.com">info@digitalbotsolutions.com</a></p>
+            </div>
+        </div>
+
+        
+    </div>
+    <!-- Pop-up Message -->
+<div id="popupMessage" class="popup-message">
+    <p>Thank you! Your message has been sent successfully.</p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+
+<script>
+    // Show the popup when the form is successfully submitted
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission to allow message pop-up
+            
+            // Show the pop-up
+            document.getElementById('popupMessage').style.display = 'block'; 
+
+            // Set a timeout to refresh the page after 3 seconds (to allow user to see the pop-up)
+            setTimeout(function() {
+                location.reload(); // Reload the page
+            }, 3000); // Adjust the time (3000ms = 3 seconds)
+        });
+
+        // Close the pop-up when the user clicks the close button
+        function closePopup() {
+            document.getElementById('popupMessage').style.display = 'none'; // Hide the pop-up
+        }
+    
+</script>
+
 
 
 <footer>
     <div class="container">
         <div class="footer-col">
             <h3>About Us</h3>
-            <p>Digital Bot Soultions Ltd.<br>Registered in England and Wales.<br> Company Registration Number: 14470283</p>
-            <p><i class="fa fa-map-o"></i> <span>West World, West Gate, London, W5 1DT,United Kingdom(Head Office</span></p>
-        </div>
+                    <p>Digital Bot Soultions Ltd.<br> is a trusted provider of online education,<br>registered in England and Wales.</p>
+					<p>We specialize in delivering high-quality courses that empower individuals to advance their skills and achieve their professional goals. </p>
+                       </div>
         <!--footer-col-->
         <div class="footer-col footer-2-col">
             <h3>Quick Links</h3>
@@ -180,7 +412,8 @@
         <!--footer-col-->
         <div class="clear"></div>
         <hr class="footer-hr">
-        <p class="copyright-footer">&copy; Copyright 2022 Digital Bot Solutions Ltd. All Rights Reserved.</p>
+       <p class="copyright-footer">&copy; Copyright 2022 Digital Bot Solutions Ltd. All Rights Reserved.<a style="color: #3B5998;">XOZO MULTIMEDIA LLP</a></p>
+          
     </div>
 </footer>
 

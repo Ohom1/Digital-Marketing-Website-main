@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--/*font awesome icons*/-->
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!--rubik font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Rubik:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+
+    <!--custom css-->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <!--media css-->
+    <link type="text/css" rel="stylesheet" href="css/media.css" />
+
+    <!--jquery ui files-->
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.structure.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.theme.min.css" />
+
+    <!--owl carousel-->
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css" />
+</head>
+<body>
+    <style>
+        /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common classes */
+.clear {
+    clear: both;
+}
+
+.container{
+    max-width: 1330px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Navigation bar styling */
+.top-bar {
+    background-color: #ffffff; /* Background color of the top bar */
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px 0; /* Vertical padding for the top bar */
+}
+
+.menu {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-around; /* Space out menu items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 15px 20px; /* Padding around each link */
+    font-size: 16px; /* Font size for better readability */
+    font-family: 'Rubik', sans-serif;
+    color: #4d4d4d; /* Text color */
+    transition: all 0.5s ease;
+}
+
+.menu a:hover {
+    color: #f47514; /* Hover color */
+}
+
+.active {
+    color: #f47514 !important; /* Highlight active menu item */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+        justify-content: center; /* Center align menu items */
+    }
+
+    .menu a {
+        padding: 10px; /* Reduce padding on smaller screens */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+    </style>
+	<header>
+		<div class="container">
+			<div class="top-bar">
+				<div class="nav-col">
+				<div class="menu">
+					<a class="active" href="index.html"> Home</a>
+					<a href="service.html"> Services</a>
+					<a href="About us.html">About Us</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="refund.html">Refund</a>
+                    <a href="privacy.html">Privacy</a>
+					<a href="contact us.html">Contact</a>
+					
+				</div>
+				<div class="clear"></div><!-- clear -->
+			</div>
+			<!--nav-col-->
+			
+			<div class="clear"></div><!-- clear -->	
+			</div>
+			<!--top-bar-->
+		</div>
+	</header>
+    
+
+
+</style>    
+<!-- Checkout Section -->
+<section class="checkout">
+    <div class="container">
+        <h1>Checkout</h1>
+
+        <form class="checkout-form" id="checkout-form">
+            <label for="course-selection">Select Course</label>
+            <select id="course-selection" name="course-selection" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="web-development">Web Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="graphic-design">Graphic Design</option>
+                <option value="digital-marketing">Digital Marketing</option>
+            </select>
+
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="zip" required>
+
+            <label for="payment-mode">Payment Mode</label>
+            <select id="payment-mode" name="payment-mode" required>
+                <option value="online" selected>Online Payment Only</option>
+            </select>
+
+            <label for="shipping-method">Shipping Method</label>
+            <select id="shipping-method" name="shipping-method" required>
+                <option value="" disabled selected>Select a shipping method</option>
+                <option value="standard">Standard Shipping</option>
+                <option value="express">Express Shipping</option>
+            </select>
+
+            <button type="button" class="btn-checkout" onclick="showThankYouModal()">Complete Order</button>
+        </form>
+    </div>
+</section>
+
+
+<!-- Thank You Modal -->
+<div id="thank-you-modal" class="modal">
+    <div class="modal-content">
+        <h2>Thank You for Your Order!</h2>
+        <p>Your order has been successfully placed. We will process it and send you a confirmation email shortly.</p>
+        <button class="btn-close" onclick="closeModal()">Close</button>
+        <button class="btn-home" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+</div>
+<style>
+/* General Styles */
+/* Dropdown Styling */
+.checkout-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.checkout-form select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Arrow for select */
+.checkout-form select::-ms-expand {
+    display: none;
+}
+
+/* Fix select appearance for Firefox */
+.checkout-form select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="gray" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 12px 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-form select {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
+h1, h2 {
+color: #2c3e50;
+}
+
+p {
+line-height: 1.6;
+}
+
+a {
+text-decoration: none;
+}
+
+
+
+/* Checkout Section */
+.checkout {
+padding: 50px 20px;
+background-color: #fff;
+}
+
+.checkout .container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.checkout h1 {
+font-size: 36px;
+margin-bottom: 20px;
+text-align: center;
+}
+
+.checkout-summary {
+margin-bottom: 30px;
+}
+
+.checkout-summary h2 {
+font-size: 28px;
+margin-bottom: 10px;
+}
+
+.summary-item {
+background-color: #f9f9f9;
+padding: 15px;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+
+.summary-item p {
+margin: 5px 0;
+}
+
+.total-price {
+font-weight: bold;
+color: #e74c3c;
+}
+
+/* Checkout Form */
+.checkout-form {
+max-width: 600px;
+margin: 0 auto;
+}
+
+.checkout-form label {
+font-size: 16px;
+margin-bottom: 8px;
+display: block;
+}
+
+.checkout-form input {
+width: 100%;
+padding: 12px;
+margin-bottom: 15px;
+border: 1px solid #ddd;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.checkout-form button {
+background-color: #3498db;
+color: white;
+padding: 15px 30px;
+font-size: 18px;
+border: none;
+border-radius: 5px;
+width: 100%;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-form button:hover {
+background-color: #2980b9;
+transform: translateY(-3px);
+}
+
+/* Modal Styles */
+.modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.modal-content {
+background-color: white;
+padding: 30px;
+border-radius: 10px;
+text-align: center;
+max-width: 500px;
+width: 80%;
+}
+
+.modal-content h2 {
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+.modal-content p {
+font-size: 18px;
+margin-bottom: 20px;
+}
+
+.btn-close, .btn-home {
+background-color: #3498db;
+color: white;
+padding: 10px 20px;
+font-size: 16px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin: 5px;
+transition: background-color 0.3s ease;
+}
+
+.btn-close:hover, .btn-home:hover {
+background-color: #2980b9;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.checkout h1 {
+    font-size: 30px;
+}
+
+.checkout-summary h2 {
+    font-size: 24px;
+}
+
+.checkout-form input {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.checkout-form button {
+    font-size: 16px;
+    padding: 12px;
+}
+}
+
+</style>
+<script>
+// Show the Thank You Modal
+// Show the Thank You Modal
+function showThankYouModal() {
+document.getElementById("thank-you-modal").style.display = "flex";
+}
+
+// Close the Thank You Modal and refresh the page
+function closeModal() {
+document.getElementById("thank-you-modal").style.display = "none";
+location.reload(); // This will refresh the page
+}
+
+// Redirect to the Home Page
+function redirectToHome() {
+window.location.href = "/";  // Replace '/' with your actual home URL
+}
+
+
+</script>
+<footer>
+    <div class="container">
+        <div class="footer-col">
+            <h3>About Us</h3>
+                    <p>Digital Bot Soultions Ltd.<br> is a trusted provider of online education,<br>registered in England and Wales.</p>
+					<p>We specialize in delivering high-quality courses that empower individuals to advance their skills and achieve their professional goals. </p>
+                       </div>
+        <!--footer-col-->
+        <div class="footer-col footer-2-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+             <div class="social-icons-footer">
+               
+            </div>
+        </div>
+        <!--footer-col-->
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <p><i class="fa fa-envelope-o"></i> <a href="mailto:demo@gmail.com">info@digitalbotsolutions.com</a></p>
+            <p><i class="fa fa-map-o"></i> <span> Office Jasmine Appartments, Road Number 5, Kakatiya Hills, Madhapur, Hyderabad, India(Branch)</span></p>
+        </div>
+        <!--footer-col-->
+        <div class="clear"></div>
+        <hr class="footer-hr">
+       <p class="copyright-footer">&copy; Copyright 2022 Digital Bot Solutions Ltd. All Rights Reserved.<a style="color: #3B5998;">XOZO MULTIMEDIA LLP</a></p>
+          
+    </div>
+</footer>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<Script src="js/jquery-ui.min.js"></Script>
+<script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<Script src="js/extrenaljq.js" type="text/javascript"></Script>
+</body>
+<script>
+$(document).ready(function() {
+$("#toggle-bar").click(function() {
+    $(".menu").slideToggle(400);
+});
+});
+
+</script>
+</html>

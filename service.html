@@ -14,6 +14,8 @@
 
     <!--media css-->
     <link type="text/css" rel="stylesheet" href="css/media.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 
     <!--jquery ui files-->
     <link type="text/css" rel="stylesheet" href="css/jquery-ui.structure.min.css" />
@@ -86,6 +88,160 @@
         font-size: 14px; /* Adjust font size */
     }
 }
+/* Hero Section */
+.services-intro {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services-intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services-intro p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Course Categories Section */
+.course-categories {
+    background-color: #f9f9f9; /* Light background for contrast with dark text */
+    padding: 60px 0;
+}
+
+.course-categories h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #f47514; /* Attractive orange color for the title */
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category-item {
+    background-color: #fff; /* White background for each card */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 22%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect on Card */
+.category-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+.category-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2c3e50; /* Dark text for category title */
+}
+
+.category-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #7f8c8d; /* Light grey text for readability */
+}
+
+.category-item .btn {
+    text-decoration: none;
+    background-color: #f47514; /* Orange color for the button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.category-item .btn:hover {
+    background-color: #f47514; /* Darker orange on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-item {
+        flex: 1 1 48%; /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .category-item {
+        flex: 1 1 100%; /* One item per row on small screens */
+    }
+}
+
+
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f5f5f5;
+    padding: 60px 0;
+}
+
+.testimonials h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonial-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial-item p {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial-item span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact .btn {
+    background-color: #f47514;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.contact .btn:hover {
+    background-color: #e06b12;
+}
+
 
     </style>
 	<header>
@@ -149,16 +305,94 @@
 
 /* Clear the float for layout consistency */
 
-</style>    
+</style>   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Digital Bot Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+
+    <!-- Services Section -->
+    <section class="services-intro">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>At Digital Bot Solutions, we offer high-quality online courses designed to help you advance your career and skillset. Explore our wide range of services and start learning today!</p>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="course-categories">
+        <div class="container">
+            <h2>Our Course Categories</h2>
+            <div class="category-list">
+                <div class="category-item">
+                    <h3>Web Development</h3>
+                    <p>Master the skills of web development, from front-end to back-end technologies.</p>
+                    <a href="web development.html" class="btn">Learn More</a>
+                </div>
+                <div class="category-item">
+                    <h3>App Development</h3>
+                    <p>Build mobile apps for iOS and Android with our hands-on app development courses.</p>
+                    <a href="app.html" class="btn">Learn More</a>
+                </div>
+                
+                <div class="category-item">
+                    <h3>WordPress</h3>
+                    <p>Learn to build custom WordPress themes and plugins.</p>
+                    <a href="wordpress.html" class="btn">Learn More</a>
+                </div>
+                
+                <div class="category-item">
+                    <h3>Digital Marketing</h3>
+                    <p>Understand digital marketing strategies, including SEO, social media, and email marketing.</p>
+                    <a href="marketing.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Students Say</h2>
+            <div class="testimonial-item">
+                <p>"The Web Development course helped me land my first job as a front-end developer. The lessons were clear, and the hands-on projects were amazing!"</p>
+                <span>- Sarah J.</span>
+            </div>
+            <div class="testimonial-item">
+                <p>"I switched careers to data science after completing the Data Science program. The course material was top-notch and very practical."</p>
+                <span>- John D.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions about our courses, or if you're ready to get started, feel free to reach out to us.</p>
+            <a href="contact us.html" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
 
 
 <footer>
     <div class="container">
         <div class="footer-col">
             <h3>About Us</h3>
-            <p>Digital Bot Soultions Ltd.<br>Registered in England and Wales.<br> Company Registration Number: 14470283</p>
-            <p><i class="fa fa-map-o"></i> <span>West World, West Gate, London, W5 1DT,United Kingdom(Head Office</span></p>
-        </div>
+                    <p>Digital Bot Soultions Ltd.<br> is a trusted provider of online education,<br>registered in England and Wales.</p>
+					<p>We specialize in delivering high-quality courses that empower individuals to advance their skills and achieve their professional goals. </p>
+                       </div>
         <!--footer-col-->
         <div class="footer-col footer-2-col">
             <h3>Quick Links</h3>
@@ -181,7 +415,8 @@
         <!--footer-col-->
         <div class="clear"></div>
         <hr class="footer-hr">
-        <p class="copyright-footer">&copy; Copyright 2022 Digital Bot Solutions Ltd. All Rights Reserved.</p>
+       <p class="copyright-footer">&copy; Copyright 2022 Digital Bot Solutions Ltd. All Rights Reserved.<a style="color: #3B5998;">XOZO MULTIMEDIA LLP</a></p>
+          
     </div>
 </footer>
 
